@@ -33,7 +33,7 @@ class FigureManagerTerminal(FigureManagerBase):
 
             self.img = tempfile.NamedTemporaryFile(buffering=0, suffix='.png')
             self.canvas.figure.savefig(
-                self.img, format='png', transparent=TRANSPARENT
+                self.img, format='png', transparent=TRANSPARENT, dpi=300, bbox_inches='tight', pad_inches=0.4
             )
             print('![terminalimage](' + self.img.name + ')')
 
